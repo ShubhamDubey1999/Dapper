@@ -1,0 +1,18 @@
+1. Find:
+SELECT * FROM Employees WHERE EmployeeId = @Id
+
+2. Add:
+INSERT INTO Employees (Name, Title, Email, Phone, CompanyId) VALUES(@Name, @Title, @Email, @Phone, @CompanyId);
+SELECT CAST(SCOPE_IDENTITY() as int);
+
+3. Update:
+UPDATE Employees SET Name = @Name, Title = @Title, Email = @Email, Phone = @Phone, CompanyId = @CompanyId WHERE EmployeeId = @EmployeeId
+
+4. Get All:
+SELECT * FROM Employees
+
+5. Remove:
+DELETE FROM Employees WHERE EmployeeId = @Id
+
+6. Get Employees In a Company:
+SELECT * FROM Employees WHERE companyId = @companyId

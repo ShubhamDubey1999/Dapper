@@ -1,0 +1,16 @@
+1. Find:
+SELECT * FROM Companies WHERE CompanyId = @Id
+
+
+2. Add:
+INSERT INTO Companies (Name, Address, City, State, PostalCode) VALUES(@Name, @Address, @City, @State, @PostalCode);
+SELECT CAST(SCOPE_IDENTITY() as int);
+
+3. Update:
+UPDATE Companies SET Name = @Name, Address = @Address, City = @City, State = @State, PostalCode = @PostalCode WHERE CompanyId = @CompanyId
+
+4. GetAll:
+SELECT * FROM Companies
+
+5. Remove
+DELETE FROM Companies WHERE CompanyId = @Id
