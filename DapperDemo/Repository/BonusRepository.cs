@@ -100,7 +100,7 @@ namespace DapperDemo.Repository
         {
             var sql = "select e.* , c.* from Employees as e inner join Companies as c on e.CompanyId = c.CompanyId";
             if (id != 0)
-                sql += "where e.CompanyId = @Id";
+                sql += " where e.CompanyId = @Id";
             return db.Query<Employee, Company, Employee>(sql, (e, c) =>
             {
                 e.Company = c;
